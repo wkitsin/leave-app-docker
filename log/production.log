@@ -3081,3 +3081,293 @@ I, [2018-03-26T09:27:29.397538 #11]  INFO -- : [e51bf513-2ed7-4459-b88c-dcf06c37
 I, [2018-03-26T09:27:29.398451 #11]  INFO -- : [e51bf513-2ed7-4459-b88c-dcf06c375cb4] Completed 200 OK in 18ms (Views: 5.7ms | ActiveRecord: 3.2ms)
 D, [2018-03-26T09:27:53.863087 #45] DEBUG -- :   [1m[36mLeaveApplication Load (0.5ms)[0m  [1m[34mSELECT  "leave_applications".* FROM "leave_applications" LIMIT $1[0m  [["LIMIT", 11]]
 D, [2018-03-26T09:28:10.060940 #48] DEBUG -- :   [1m[36mLeaveApplication Load (0.4ms)[0m  [1m[34mSELECT  "leave_applications".* FROM "leave_applications" LIMIT $1[0m  [["LIMIT", 11]]
+I, [2018-03-27T08:18:56.730745 #10]  INFO -- : [b57fb11b-c996-4516-8f75-674e5454f8e3] Started GET "/" for 172.25.0.4 at 2018-03-27 08:18:56 +0000
+I, [2018-03-27T08:18:56.735246 #10]  INFO -- : [b57fb11b-c996-4516-8f75-674e5454f8e3] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:18:57.099017 #10] DEBUG -- : [b57fb11b-c996-4516-8f75-674e5454f8e3]   [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:18:57.151063 #10] DEBUG -- : [b57fb11b-c996-4516-8f75-674e5454f8e3]   [1m[35m (3.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:18:57.176328 #10]  INFO -- : [b57fb11b-c996-4516-8f75-674e5454f8e3]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:18:57.196843 #10]  INFO -- : [b57fb11b-c996-4516-8f75-674e5454f8e3]   Rendered users/dashboard.html.erb within layouts/application (20.2ms)
+I, [2018-03-27T08:18:57.207106 #10]  INFO -- : [b57fb11b-c996-4516-8f75-674e5454f8e3]   Rendered layouts/_navbar.html.erb (1.0ms)
+I, [2018-03-27T08:18:57.207782 #10]  INFO -- : [b57fb11b-c996-4516-8f75-674e5454f8e3] Completed 200 OK in 472ms (Views: 46.9ms | ActiveRecord: 206.3ms)
+I, [2018-03-27T08:23:15.026562 #16]  INFO -- : [70429e85-5b95-4e09-89d2-b0db3bdbb2d8] Started GET "/" for 172.25.0.1 at 2018-03-27 08:23:15 +0000
+I, [2018-03-27T08:23:15.033174 #16]  INFO -- : [70429e85-5b95-4e09-89d2-b0db3bdbb2d8] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:23:15.070953 #16] DEBUG -- : [70429e85-5b95-4e09-89d2-b0db3bdbb2d8]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:23:15.117659 #16] DEBUG -- : [70429e85-5b95-4e09-89d2-b0db3bdbb2d8]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:23:15.150673 #16]  INFO -- : [70429e85-5b95-4e09-89d2-b0db3bdbb2d8]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:23:15.168888 #16]  INFO -- : [70429e85-5b95-4e09-89d2-b0db3bdbb2d8]   Rendered users/dashboard.html.erb within layouts/application (17.8ms)
+I, [2018-03-27T08:23:15.181602 #16]  INFO -- : [70429e85-5b95-4e09-89d2-b0db3bdbb2d8]   Rendered layouts/_navbar.html.erb (0.9ms)
+I, [2018-03-27T08:23:15.182371 #16]  INFO -- : [70429e85-5b95-4e09-89d2-b0db3bdbb2d8] Completed 200 OK in 149ms (Views: 49.3ms | ActiveRecord: 13.6ms)
+I, [2018-03-27T08:23:19.172451 #10]  INFO -- : [c9b30005-7e07-4ca6-a403-ea27998e3731] Started GET "/" for 172.25.0.4 at 2018-03-27 08:23:19 +0000
+I, [2018-03-27T08:23:19.173563 #10]  INFO -- : [c9b30005-7e07-4ca6-a403-ea27998e3731] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:23:19.177300 #10] DEBUG -- : [c9b30005-7e07-4ca6-a403-ea27998e3731]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:23:19.181509 #10] DEBUG -- : [c9b30005-7e07-4ca6-a403-ea27998e3731]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:23:19.182425 #10]  INFO -- : [c9b30005-7e07-4ca6-a403-ea27998e3731]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:23:19.184057 #10]  INFO -- : [c9b30005-7e07-4ca6-a403-ea27998e3731]   Rendered users/dashboard.html.erb within layouts/application (1.1ms)
+I, [2018-03-27T08:23:19.185286 #10]  INFO -- : [c9b30005-7e07-4ca6-a403-ea27998e3731]   Rendered layouts/_navbar.html.erb (0.3ms)
+I, [2018-03-27T08:23:19.185860 #10]  INFO -- : [c9b30005-7e07-4ca6-a403-ea27998e3731] Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 1.3ms)
+I, [2018-03-27T08:25:03.197623 #16]  INFO -- : [a52df329-a3fa-4993-8cc1-38c3ff995c0c] Started GET "/" for 172.25.0.4 at 2018-03-27 08:25:03 +0000
+I, [2018-03-27T08:25:03.200696 #16]  INFO -- : [a52df329-a3fa-4993-8cc1-38c3ff995c0c] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:25:03.204294 #16] DEBUG -- : [a52df329-a3fa-4993-8cc1-38c3ff995c0c]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:25:03.208127 #16] DEBUG -- : [a52df329-a3fa-4993-8cc1-38c3ff995c0c]   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:25:03.209067 #16]  INFO -- : [a52df329-a3fa-4993-8cc1-38c3ff995c0c]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:25:03.210568 #16]  INFO -- : [a52df329-a3fa-4993-8cc1-38c3ff995c0c]   Rendered users/dashboard.html.erb within layouts/application (1.1ms)
+I, [2018-03-27T08:25:03.212356 #16]  INFO -- : [a52df329-a3fa-4993-8cc1-38c3ff995c0c]   Rendered layouts/_navbar.html.erb (0.3ms)
+I, [2018-03-27T08:25:03.213058 #16]  INFO -- : [a52df329-a3fa-4993-8cc1-38c3ff995c0c] Completed 200 OK in 12ms (Views: 4.2ms | ActiveRecord: 1.0ms)
+I, [2018-03-27T08:25:08.208043 #10]  INFO -- : [f395a0c7-1d83-4c27-b020-c0948d6f2521] Started GET "/" for 172.25.0.1 at 2018-03-27 08:25:08 +0000
+I, [2018-03-27T08:25:08.209026 #10]  INFO -- : [f395a0c7-1d83-4c27-b020-c0948d6f2521] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:25:08.213099 #10] DEBUG -- : [f395a0c7-1d83-4c27-b020-c0948d6f2521]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:25:08.217005 #10] DEBUG -- : [f395a0c7-1d83-4c27-b020-c0948d6f2521]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:25:08.217896 #10]  INFO -- : [f395a0c7-1d83-4c27-b020-c0948d6f2521]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:25:08.220025 #10]  INFO -- : [f395a0c7-1d83-4c27-b020-c0948d6f2521]   Rendered users/dashboard.html.erb within layouts/application (1.7ms)
+I, [2018-03-27T08:25:08.221505 #10]  INFO -- : [f395a0c7-1d83-4c27-b020-c0948d6f2521]   Rendered layouts/_navbar.html.erb (0.3ms)
+I, [2018-03-27T08:25:08.222195 #10]  INFO -- : [f395a0c7-1d83-4c27-b020-c0948d6f2521] Completed 200 OK in 13ms (Views: 4.5ms | ActiveRecord: 2.1ms)
+I, [2018-03-27T08:25:46.869528 #10]  INFO -- : [02ce14ee-c107-4694-84f2-55a63f0db5ca] Started GET "/" for 172.25.0.1 at 2018-03-27 08:25:46 +0000
+I, [2018-03-27T08:25:46.870548 #10]  INFO -- : [02ce14ee-c107-4694-84f2-55a63f0db5ca] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:25:46.872828 #10] DEBUG -- : [02ce14ee-c107-4694-84f2-55a63f0db5ca]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:25:46.875761 #10] DEBUG -- : [02ce14ee-c107-4694-84f2-55a63f0db5ca]   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:25:46.876622 #10]  INFO -- : [02ce14ee-c107-4694-84f2-55a63f0db5ca]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:25:46.878091 #10]  INFO -- : [02ce14ee-c107-4694-84f2-55a63f0db5ca]   Rendered users/dashboard.html.erb within layouts/application (1.1ms)
+I, [2018-03-27T08:25:46.879235 #10]  INFO -- : [02ce14ee-c107-4694-84f2-55a63f0db5ca]   Rendered layouts/_navbar.html.erb (0.2ms)
+I, [2018-03-27T08:25:46.879854 #10]  INFO -- : [02ce14ee-c107-4694-84f2-55a63f0db5ca] Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 1.3ms)
+I, [2018-03-27T08:25:51.357821 #16]  INFO -- : [8a545889-4dbe-4b80-a0d7-2a35e9a4e90f] Started GET "/" for 172.25.0.4 at 2018-03-27 08:25:51 +0000
+I, [2018-03-27T08:25:51.359377 #16]  INFO -- : [8a545889-4dbe-4b80-a0d7-2a35e9a4e90f] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:25:51.362360 #16] DEBUG -- : [8a545889-4dbe-4b80-a0d7-2a35e9a4e90f]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:25:51.365276 #16] DEBUG -- : [8a545889-4dbe-4b80-a0d7-2a35e9a4e90f]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:25:51.366079 #16]  INFO -- : [8a545889-4dbe-4b80-a0d7-2a35e9a4e90f]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:25:51.368102 #16]  INFO -- : [8a545889-4dbe-4b80-a0d7-2a35e9a4e90f]   Rendered users/dashboard.html.erb within layouts/application (1.5ms)
+I, [2018-03-27T08:25:51.369744 #16]  INFO -- : [8a545889-4dbe-4b80-a0d7-2a35e9a4e90f]   Rendered layouts/_navbar.html.erb (0.4ms)
+I, [2018-03-27T08:25:51.370557 #16]  INFO -- : [8a545889-4dbe-4b80-a0d7-2a35e9a4e90f] Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 1.1ms)
+I, [2018-03-27T08:37:08.680548 #7]  INFO -- : [a2e14c53-75dd-4da7-8290-5cdc3d0e7241] Started GET "/" for 172.25.0.4 at 2018-03-27 08:37:08 +0000
+I, [2018-03-27T08:37:08.686707 #7]  INFO -- : [a2e14c53-75dd-4da7-8290-5cdc3d0e7241] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:37:08.734241 #7] DEBUG -- : [a2e14c53-75dd-4da7-8290-5cdc3d0e7241]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:37:08.786129 #7] DEBUG -- : [a2e14c53-75dd-4da7-8290-5cdc3d0e7241]   [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:37:08.815523 #7]  INFO -- : [a2e14c53-75dd-4da7-8290-5cdc3d0e7241]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:37:08.829228 #7]  INFO -- : [a2e14c53-75dd-4da7-8290-5cdc3d0e7241]   Rendered users/dashboard.html.erb within layouts/application (13.3ms)
+I, [2018-03-27T08:37:08.844907 #7]  INFO -- : [a2e14c53-75dd-4da7-8290-5cdc3d0e7241]   Rendered layouts/_navbar.html.erb (1.0ms)
+I, [2018-03-27T08:37:08.845703 #7]  INFO -- : [a2e14c53-75dd-4da7-8290-5cdc3d0e7241] Completed 200 OK in 158ms (Views: 48.2ms | ActiveRecord: 17.1ms)
+I, [2018-03-27T08:37:24.285909 #7]  INFO -- : [2ac38bb8-7d82-449e-9676-817b77fa7317] Started GET "/" for 172.25.0.4 at 2018-03-27 08:37:24 +0000
+I, [2018-03-27T08:37:24.286949 #7]  INFO -- : [2ac38bb8-7d82-449e-9676-817b77fa7317] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:37:24.289684 #7] DEBUG -- : [2ac38bb8-7d82-449e-9676-817b77fa7317]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:37:24.292667 #7] DEBUG -- : [2ac38bb8-7d82-449e-9676-817b77fa7317]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:37:24.293887 #7]  INFO -- : [2ac38bb8-7d82-449e-9676-817b77fa7317]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:37:24.295826 #7]  INFO -- : [2ac38bb8-7d82-449e-9676-817b77fa7317]   Rendered users/dashboard.html.erb within layouts/application (1.5ms)
+I, [2018-03-27T08:37:24.297732 #7]  INFO -- : [2ac38bb8-7d82-449e-9676-817b77fa7317]   Rendered layouts/_navbar.html.erb (0.5ms)
+I, [2018-03-27T08:37:24.298456 #7]  INFO -- : [2ac38bb8-7d82-449e-9676-817b77fa7317] Completed 200 OK in 11ms (Views: 4.9ms | ActiveRecord: 1.3ms)
+I, [2018-03-27T08:37:38.225258 #13]  INFO -- : [67ea297a-27a6-4cee-a190-c18d576ae542] Started GET "/" for 172.25.0.4 at 2018-03-27 08:37:38 +0000
+I, [2018-03-27T08:37:38.230056 #13]  INFO -- : [67ea297a-27a6-4cee-a190-c18d576ae542] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:37:38.278986 #13] DEBUG -- : [67ea297a-27a6-4cee-a190-c18d576ae542]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:37:38.361815 #13] DEBUG -- : [67ea297a-27a6-4cee-a190-c18d576ae542]   [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:37:38.405323 #13]  INFO -- : [67ea297a-27a6-4cee-a190-c18d576ae542]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:37:38.421492 #13]  INFO -- : [67ea297a-27a6-4cee-a190-c18d576ae542]   Rendered users/dashboard.html.erb within layouts/application (15.3ms)
+I, [2018-03-27T08:37:38.432610 #13]  INFO -- : [67ea297a-27a6-4cee-a190-c18d576ae542]   Rendered layouts/_navbar.html.erb (1.1ms)
+I, [2018-03-27T08:37:38.433380 #13]  INFO -- : [67ea297a-27a6-4cee-a190-c18d576ae542] Completed 200 OK in 203ms (Views: 53.4ms | ActiveRecord: 21.4ms)
+I, [2018-03-27T08:37:41.901602 #13]  INFO -- : [380e4e01-7247-4e5f-be88-12878c42bb58] Started GET "/" for 172.25.0.1 at 2018-03-27 08:37:41 +0000
+I, [2018-03-27T08:37:41.902713 #13]  INFO -- : [380e4e01-7247-4e5f-be88-12878c42bb58] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:37:41.906825 #13] DEBUG -- : [380e4e01-7247-4e5f-be88-12878c42bb58]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:37:41.910180 #13] DEBUG -- : [380e4e01-7247-4e5f-be88-12878c42bb58]   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:37:41.911015 #13]  INFO -- : [380e4e01-7247-4e5f-be88-12878c42bb58]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:37:41.912908 #13]  INFO -- : [380e4e01-7247-4e5f-be88-12878c42bb58]   Rendered users/dashboard.html.erb within layouts/application (1.4ms)
+I, [2018-03-27T08:37:41.915377 #13]  INFO -- : [380e4e01-7247-4e5f-be88-12878c42bb58]   Rendered layouts/_navbar.html.erb (0.7ms)
+I, [2018-03-27T08:37:41.916071 #13]  INFO -- : [380e4e01-7247-4e5f-be88-12878c42bb58] Completed 200 OK in 13ms (Views: 5.2ms | ActiveRecord: 1.5ms)
+I, [2018-03-27T08:37:44.463004 #13]  INFO -- : [0ae1b318-6a45-4569-825a-d5cf7783b906] Started GET "/" for 172.25.0.1 at 2018-03-27 08:37:44 +0000
+I, [2018-03-27T08:37:44.464137 #13]  INFO -- : [0ae1b318-6a45-4569-825a-d5cf7783b906] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:37:44.467163 #13] DEBUG -- : [0ae1b318-6a45-4569-825a-d5cf7783b906]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:37:44.470344 #13] DEBUG -- : [0ae1b318-6a45-4569-825a-d5cf7783b906]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:37:44.471305 #13]  INFO -- : [0ae1b318-6a45-4569-825a-d5cf7783b906]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:37:44.474128 #13]  INFO -- : [0ae1b318-6a45-4569-825a-d5cf7783b906]   Rendered users/dashboard.html.erb within layouts/application (2.2ms)
+I, [2018-03-27T08:37:44.476104 #13]  INFO -- : [0ae1b318-6a45-4569-825a-d5cf7783b906]   Rendered layouts/_navbar.html.erb (0.7ms)
+I, [2018-03-27T08:37:44.476999 #13]  INFO -- : [0ae1b318-6a45-4569-825a-d5cf7783b906] Completed 200 OK in 12ms (Views: 5.9ms | ActiveRecord: 1.3ms)
+I, [2018-03-27T08:38:07.705160 #11]  INFO -- : [fc92e75f-b479-463c-9d0f-c70fff9e4c5f] Started GET "/" for 172.25.0.4 at 2018-03-27 08:38:07 +0000
+I, [2018-03-27T08:38:07.711450 #11]  INFO -- : [fc92e75f-b479-463c-9d0f-c70fff9e4c5f] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:38:07.757811 #11] DEBUG -- : [fc92e75f-b479-463c-9d0f-c70fff9e4c5f]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:38:07.830880 #11] DEBUG -- : [fc92e75f-b479-463c-9d0f-c70fff9e4c5f]   [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:38:07.861973 #11]  INFO -- : [fc92e75f-b479-463c-9d0f-c70fff9e4c5f]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:38:07.877844 #11]  INFO -- : [fc92e75f-b479-463c-9d0f-c70fff9e4c5f]   Rendered users/dashboard.html.erb within layouts/application (15.1ms)
+I, [2018-03-27T08:38:07.890465 #11]  INFO -- : [fc92e75f-b479-463c-9d0f-c70fff9e4c5f]   Rendered layouts/_navbar.html.erb (1.0ms)
+I, [2018-03-27T08:38:07.891280 #11]  INFO -- : [fc92e75f-b479-463c-9d0f-c70fff9e4c5f] Completed 200 OK in 179ms (Views: 45.6ms | ActiveRecord: 15.6ms)
+I, [2018-03-27T08:38:10.990441 #11]  INFO -- : [743b8deb-9850-4b2d-b45f-f3245976964e] Started GET "/" for 172.25.0.1 at 2018-03-27 08:38:10 +0000
+I, [2018-03-27T08:38:10.991432 #11]  INFO -- : [743b8deb-9850-4b2d-b45f-f3245976964e] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:38:10.994320 #11] DEBUG -- : [743b8deb-9850-4b2d-b45f-f3245976964e]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:38:10.999105 #11] DEBUG -- : [743b8deb-9850-4b2d-b45f-f3245976964e]   [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:38:11.000195 #11]  INFO -- : [743b8deb-9850-4b2d-b45f-f3245976964e]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:38:11.002140 #11]  INFO -- : [743b8deb-9850-4b2d-b45f-f3245976964e]   Rendered users/dashboard.html.erb within layouts/application (1.4ms)
+I, [2018-03-27T08:38:11.003392 #11]  INFO -- : [743b8deb-9850-4b2d-b45f-f3245976964e]   Rendered layouts/_navbar.html.erb (0.2ms)
+I, [2018-03-27T08:38:11.004121 #11]  INFO -- : [743b8deb-9850-4b2d-b45f-f3245976964e] Completed 200 OK in 12ms (Views: 4.1ms | ActiveRecord: 1.7ms)
+I, [2018-03-27T08:51:53.327915 #7]  INFO -- : [bfebf88e-f670-4350-82fd-171cc746f79a] Started GET "/" for 172.25.0.1 at 2018-03-27 08:51:53 +0000
+I, [2018-03-27T08:51:53.333964 #7]  INFO -- : [bfebf88e-f670-4350-82fd-171cc746f79a] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:51:53.382158 #7] DEBUG -- : [bfebf88e-f670-4350-82fd-171cc746f79a]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:51:53.459327 #7] DEBUG -- : [bfebf88e-f670-4350-82fd-171cc746f79a]   [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:51:53.500991 #7]  INFO -- : [bfebf88e-f670-4350-82fd-171cc746f79a]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:51:53.518198 #7]  INFO -- : [bfebf88e-f670-4350-82fd-171cc746f79a]   Rendered users/dashboard.html.erb within layouts/application (16.8ms)
+I, [2018-03-27T08:51:53.541154 #7]  INFO -- : [bfebf88e-f670-4350-82fd-171cc746f79a]   Rendered layouts/_navbar.html.erb (1.3ms)
+I, [2018-03-27T08:51:53.542162 #7]  INFO -- : [bfebf88e-f670-4350-82fd-171cc746f79a] Completed 200 OK in 208ms (Views: 66.9ms | ActiveRecord: 16.7ms)
+I, [2018-03-27T08:51:56.146074 #11]  INFO -- : [1ff3c49b-99f1-421b-80a0-fadc9d8bb183] Started GET "/" for 172.25.0.4 at 2018-03-27 08:51:56 +0000
+I, [2018-03-27T08:51:56.147109 #11]  INFO -- : [1ff3c49b-99f1-421b-80a0-fadc9d8bb183] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:51:56.150058 #11] DEBUG -- : [1ff3c49b-99f1-421b-80a0-fadc9d8bb183]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:51:56.153377 #11] DEBUG -- : [1ff3c49b-99f1-421b-80a0-fadc9d8bb183]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:51:56.154856 #11]  INFO -- : [1ff3c49b-99f1-421b-80a0-fadc9d8bb183]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:51:56.157368 #11]  INFO -- : [1ff3c49b-99f1-421b-80a0-fadc9d8bb183]   Rendered users/dashboard.html.erb within layouts/application (2.1ms)
+I, [2018-03-27T08:51:56.158893 #11]  INFO -- : [1ff3c49b-99f1-421b-80a0-fadc9d8bb183]   Rendered layouts/_navbar.html.erb (0.2ms)
+I, [2018-03-27T08:51:56.159909 #11]  INFO -- : [1ff3c49b-99f1-421b-80a0-fadc9d8bb183] Completed 200 OK in 12ms (Views: 5.2ms | ActiveRecord: 1.5ms)
+I, [2018-03-27T08:52:27.468720 #13]  INFO -- : [2b70043f-9a71-42c1-8f5a-64a7439b3244] Started GET "/" for 172.25.0.4 at 2018-03-27 08:52:27 +0000
+I, [2018-03-27T08:52:27.473703 #13]  INFO -- : [2b70043f-9a71-42c1-8f5a-64a7439b3244] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:52:27.511643 #13] DEBUG -- : [2b70043f-9a71-42c1-8f5a-64a7439b3244]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:52:27.558443 #13] DEBUG -- : [2b70043f-9a71-42c1-8f5a-64a7439b3244]   [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:52:27.588444 #13]  INFO -- : [2b70043f-9a71-42c1-8f5a-64a7439b3244]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:52:27.603494 #13]  INFO -- : [2b70043f-9a71-42c1-8f5a-64a7439b3244]   Rendered users/dashboard.html.erb within layouts/application (14.6ms)
+I, [2018-03-27T08:52:27.617141 #13]  INFO -- : [2b70043f-9a71-42c1-8f5a-64a7439b3244]   Rendered layouts/_navbar.html.erb (1.5ms)
+I, [2018-03-27T08:52:27.617921 #13]  INFO -- : [2b70043f-9a71-42c1-8f5a-64a7439b3244] Completed 200 OK in 143ms (Views: 47.5ms | ActiveRecord: 14.0ms)
+I, [2018-03-27T08:52:31.667236 #13]  INFO -- : [765651c5-f11f-4802-89fa-6f2a6a004028] Started GET "/" for 172.25.0.1 at 2018-03-27 08:52:31 +0000
+I, [2018-03-27T08:52:31.668816 #13]  INFO -- : [765651c5-f11f-4802-89fa-6f2a6a004028] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:52:31.673048 #13] DEBUG -- : [765651c5-f11f-4802-89fa-6f2a6a004028]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:52:31.676915 #13] DEBUG -- : [765651c5-f11f-4802-89fa-6f2a6a004028]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:52:31.677841 #13]  INFO -- : [765651c5-f11f-4802-89fa-6f2a6a004028]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:52:31.680030 #13]  INFO -- : [765651c5-f11f-4802-89fa-6f2a6a004028]   Rendered users/dashboard.html.erb within layouts/application (1.9ms)
+I, [2018-03-27T08:52:31.681271 #13]  INFO -- : [765651c5-f11f-4802-89fa-6f2a6a004028]   Rendered layouts/_navbar.html.erb (0.3ms)
+I, [2018-03-27T08:52:31.681850 #13]  INFO -- : [765651c5-f11f-4802-89fa-6f2a6a004028] Completed 200 OK in 12ms (Views: 4.2ms | ActiveRecord: 1.1ms)
+I, [2018-03-27T08:52:58.082121 #23]  INFO -- : [650cea9f-fe8e-48a2-aed0-23008c90b6f8] Started GET "/" for 172.25.0.4 at 2018-03-27 08:52:58 +0000
+I, [2018-03-27T08:52:58.090296 #23]  INFO -- : [650cea9f-fe8e-48a2-aed0-23008c90b6f8] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:52:58.134832 #23] DEBUG -- : [650cea9f-fe8e-48a2-aed0-23008c90b6f8]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:52:58.176374 #23] DEBUG -- : [650cea9f-fe8e-48a2-aed0-23008c90b6f8]   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:52:58.205447 #23]  INFO -- : [650cea9f-fe8e-48a2-aed0-23008c90b6f8]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:52:58.219649 #23]  INFO -- : [650cea9f-fe8e-48a2-aed0-23008c90b6f8]   Rendered users/dashboard.html.erb within layouts/application (13.8ms)
+I, [2018-03-27T08:52:58.231202 #23]  INFO -- : [650cea9f-fe8e-48a2-aed0-23008c90b6f8]   Rendered layouts/_navbar.html.erb (1.0ms)
+I, [2018-03-27T08:52:58.231958 #23]  INFO -- : [650cea9f-fe8e-48a2-aed0-23008c90b6f8] Completed 200 OK in 140ms (Views: 44.1ms | ActiveRecord: 15.1ms)
+I, [2018-03-27T08:55:14.282113 #9]  INFO -- : [94e08fad-6db5-4fc2-a73e-8443f86ec31f] Started GET "/" for 172.25.0.1 at 2018-03-27 08:55:14 +0000
+I, [2018-03-27T08:55:14.289572 #9]  INFO -- : [94e08fad-6db5-4fc2-a73e-8443f86ec31f] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:55:14.327410 #9] DEBUG -- : [94e08fad-6db5-4fc2-a73e-8443f86ec31f]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:55:14.371406 #9] DEBUG -- : [94e08fad-6db5-4fc2-a73e-8443f86ec31f]   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:55:14.405594 #9]  INFO -- : [94e08fad-6db5-4fc2-a73e-8443f86ec31f]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:55:14.424380 #9]  INFO -- : [94e08fad-6db5-4fc2-a73e-8443f86ec31f]   Rendered users/dashboard.html.erb within layouts/application (18.2ms)
+I, [2018-03-27T08:55:14.435232 #9]  INFO -- : [94e08fad-6db5-4fc2-a73e-8443f86ec31f]   Rendered layouts/_navbar.html.erb (1.1ms)
+I, [2018-03-27T08:55:14.436012 #9]  INFO -- : [94e08fad-6db5-4fc2-a73e-8443f86ec31f] Completed 200 OK in 146ms (Views: 52.6ms | ActiveRecord: 13.9ms)
+I, [2018-03-27T08:55:17.595282 #9]  INFO -- : [cab0a2a4-e576-4a7b-9429-77181fa1b9ba] Started GET "/" for 172.25.0.1 at 2018-03-27 08:55:17 +0000
+I, [2018-03-27T08:55:17.596631 #9]  INFO -- : [cab0a2a4-e576-4a7b-9429-77181fa1b9ba] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:55:17.600180 #9] DEBUG -- : [cab0a2a4-e576-4a7b-9429-77181fa1b9ba]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:55:17.602900 #9] DEBUG -- : [cab0a2a4-e576-4a7b-9429-77181fa1b9ba]   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:55:17.604342 #9]  INFO -- : [cab0a2a4-e576-4a7b-9429-77181fa1b9ba]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:55:17.606111 #9]  INFO -- : [cab0a2a4-e576-4a7b-9429-77181fa1b9ba]   Rendered users/dashboard.html.erb within layouts/application (1.4ms)
+I, [2018-03-27T08:55:17.607652 #9]  INFO -- : [cab0a2a4-e576-4a7b-9429-77181fa1b9ba]   Rendered layouts/_navbar.html.erb (0.3ms)
+I, [2018-03-27T08:55:17.608268 #9]  INFO -- : [cab0a2a4-e576-4a7b-9429-77181fa1b9ba] Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 1.0ms)
+I, [2018-03-27T08:59:30.438788 #23]  INFO -- : [09160c80-e0de-4763-b609-77a2f51e9de7] Started GET "/" for 172.25.0.4 at 2018-03-27 08:59:30 +0000
+I, [2018-03-27T08:59:30.441447 #23]  INFO -- : [09160c80-e0de-4763-b609-77a2f51e9de7] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:59:30.445608 #23] DEBUG -- : [09160c80-e0de-4763-b609-77a2f51e9de7]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:59:30.448582 #23] DEBUG -- : [09160c80-e0de-4763-b609-77a2f51e9de7]   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:59:30.449499 #23]  INFO -- : [09160c80-e0de-4763-b609-77a2f51e9de7]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:59:30.451141 #23]  INFO -- : [09160c80-e0de-4763-b609-77a2f51e9de7]   Rendered users/dashboard.html.erb within layouts/application (1.2ms)
+I, [2018-03-27T08:59:30.452393 #23]  INFO -- : [09160c80-e0de-4763-b609-77a2f51e9de7]   Rendered layouts/_navbar.html.erb (0.3ms)
+I, [2018-03-27T08:59:30.452993 #23]  INFO -- : [09160c80-e0de-4763-b609-77a2f51e9de7] Completed 200 OK in 11ms (Views: 3.7ms | ActiveRecord: 1.3ms)
+I, [2018-03-27T08:59:34.849080 #9]  INFO -- : [09dbc967-0e85-4202-ba96-195c58813230] Started GET "/" for 172.25.0.1 at 2018-03-27 08:59:34 +0000
+I, [2018-03-27T08:59:34.849970 #9]  INFO -- : [09dbc967-0e85-4202-ba96-195c58813230] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T08:59:34.852485 #9] DEBUG -- : [09dbc967-0e85-4202-ba96-195c58813230]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T08:59:34.855440 #9] DEBUG -- : [09dbc967-0e85-4202-ba96-195c58813230]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T08:59:34.856549 #9]  INFO -- : [09dbc967-0e85-4202-ba96-195c58813230]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T08:59:34.858173 #9]  INFO -- : [09dbc967-0e85-4202-ba96-195c58813230]   Rendered users/dashboard.html.erb within layouts/application (1.3ms)
+I, [2018-03-27T08:59:34.859207 #9]  INFO -- : [09dbc967-0e85-4202-ba96-195c58813230]   Rendered layouts/_navbar.html.erb (0.2ms)
+I, [2018-03-27T08:59:34.859862 #9]  INFO -- : [09dbc967-0e85-4202-ba96-195c58813230] Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 1.3ms)
+I, [2018-03-27T09:24:03.028125 #13]  INFO -- : [5744228e-1284-4b14-b884-7ebf9b121eb6] Started GET "/" for 172.25.0.4 at 2018-03-27 09:24:03 +0000
+I, [2018-03-27T09:24:03.037140 #13]  INFO -- : [5744228e-1284-4b14-b884-7ebf9b121eb6] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T09:24:03.081857 #13] DEBUG -- : [5744228e-1284-4b14-b884-7ebf9b121eb6]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T09:24:03.137045 #13] DEBUG -- : [5744228e-1284-4b14-b884-7ebf9b121eb6]   [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T09:24:03.170234 #13]  INFO -- : [5744228e-1284-4b14-b884-7ebf9b121eb6]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T09:24:03.188530 #13]  INFO -- : [5744228e-1284-4b14-b884-7ebf9b121eb6]   Rendered users/dashboard.html.erb within layouts/application (17.8ms)
+I, [2018-03-27T09:24:03.203932 #13]  INFO -- : [5744228e-1284-4b14-b884-7ebf9b121eb6]   Rendered layouts/_navbar.html.erb (1.0ms)
+I, [2018-03-27T09:24:03.204781 #13]  INFO -- : [5744228e-1284-4b14-b884-7ebf9b121eb6] Completed 200 OK in 167ms (Views: 53.4ms | ActiveRecord: 16.9ms)
+I, [2018-03-27T09:24:06.184593 #13]  INFO -- : [528500a8-15f8-45a5-99db-8a0386f038b9] Started GET "/" for 172.25.0.4 at 2018-03-27 09:24:06 +0000
+I, [2018-03-27T09:24:06.185784 #13]  INFO -- : [528500a8-15f8-45a5-99db-8a0386f038b9] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T09:24:06.189686 #13] DEBUG -- : [528500a8-15f8-45a5-99db-8a0386f038b9]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T09:24:06.193862 #13] DEBUG -- : [528500a8-15f8-45a5-99db-8a0386f038b9]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T09:24:06.194893 #13]  INFO -- : [528500a8-15f8-45a5-99db-8a0386f038b9]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T09:24:06.196742 #13]  INFO -- : [528500a8-15f8-45a5-99db-8a0386f038b9]   Rendered users/dashboard.html.erb within layouts/application (1.4ms)
+I, [2018-03-27T09:24:06.197913 #13]  INFO -- : [528500a8-15f8-45a5-99db-8a0386f038b9]   Rendered layouts/_navbar.html.erb (0.3ms)
+I, [2018-03-27T09:24:06.198571 #13]  INFO -- : [528500a8-15f8-45a5-99db-8a0386f038b9] Completed 200 OK in 12ms (Views: 4.0ms | ActiveRecord: 1.3ms)
+I, [2018-03-27T09:24:11.638400 #13]  INFO -- : [3d1b93f7-8f2c-4e1f-90a2-2eca788044e9] Started GET "/" for 172.25.0.1 at 2018-03-27 09:24:11 +0000
+I, [2018-03-27T09:24:11.639497 #13]  INFO -- : [3d1b93f7-8f2c-4e1f-90a2-2eca788044e9] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T09:24:11.641788 #13] DEBUG -- : [3d1b93f7-8f2c-4e1f-90a2-2eca788044e9]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T09:24:11.645896 #13] DEBUG -- : [3d1b93f7-8f2c-4e1f-90a2-2eca788044e9]   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T09:24:11.646855 #13]  INFO -- : [3d1b93f7-8f2c-4e1f-90a2-2eca788044e9]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T09:24:11.648707 #13]  INFO -- : [3d1b93f7-8f2c-4e1f-90a2-2eca788044e9]   Rendered users/dashboard.html.erb within layouts/application (1.3ms)
+I, [2018-03-27T09:24:11.649870 #13]  INFO -- : [3d1b93f7-8f2c-4e1f-90a2-2eca788044e9]   Rendered layouts/_navbar.html.erb (0.3ms)
+I, [2018-03-27T09:24:11.650503 #13]  INFO -- : [3d1b93f7-8f2c-4e1f-90a2-2eca788044e9] Completed 200 OK in 11ms (Views: 3.8ms | ActiveRecord: 0.9ms)
+I, [2018-03-27T09:24:14.279600 #13]  INFO -- : [4abf346c-efdc-47c8-8c6b-6f1c4b360abf] Started GET "/" for 172.25.0.1 at 2018-03-27 09:24:14 +0000
+I, [2018-03-27T09:24:14.281617 #13]  INFO -- : [4abf346c-efdc-47c8-8c6b-6f1c4b360abf] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T09:24:14.285465 #13] DEBUG -- : [4abf346c-efdc-47c8-8c6b-6f1c4b360abf]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T09:24:14.288783 #13] DEBUG -- : [4abf346c-efdc-47c8-8c6b-6f1c4b360abf]   [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T09:24:14.289964 #13]  INFO -- : [4abf346c-efdc-47c8-8c6b-6f1c4b360abf]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T09:24:14.291942 #13]  INFO -- : [4abf346c-efdc-47c8-8c6b-6f1c4b360abf]   Rendered users/dashboard.html.erb within layouts/application (1.5ms)
+I, [2018-03-27T09:24:14.293172 #13]  INFO -- : [4abf346c-efdc-47c8-8c6b-6f1c4b360abf]   Rendered layouts/_navbar.html.erb (0.3ms)
+I, [2018-03-27T09:24:14.293908 #13]  INFO -- : [4abf346c-efdc-47c8-8c6b-6f1c4b360abf] Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 1.0ms)
+I, [2018-03-27T09:24:14.954336 #13]  INFO -- : [1b934247-aee3-4882-8194-45fb68e13713] Started GET "/" for 172.25.0.1 at 2018-03-27 09:24:14 +0000
+I, [2018-03-27T09:24:14.957630 #13]  INFO -- : [1b934247-aee3-4882-8194-45fb68e13713] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T09:24:14.961026 #13] DEBUG -- : [1b934247-aee3-4882-8194-45fb68e13713]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T09:24:14.964664 #13] DEBUG -- : [1b934247-aee3-4882-8194-45fb68e13713]   [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T09:24:14.965879 #13]  INFO -- : [1b934247-aee3-4882-8194-45fb68e13713]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T09:24:14.967778 #13]  INFO -- : [1b934247-aee3-4882-8194-45fb68e13713]   Rendered users/dashboard.html.erb within layouts/application (1.4ms)
+I, [2018-03-27T09:24:14.969380 #13]  INFO -- : [1b934247-aee3-4882-8194-45fb68e13713]   Rendered layouts/_navbar.html.erb (0.4ms)
+I, [2018-03-27T09:24:14.970019 #13]  INFO -- : [1b934247-aee3-4882-8194-45fb68e13713] Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 1.7ms)
+I, [2018-03-27T09:24:15.736272 #13]  INFO -- : [b0d58a30-de55-405b-a53a-0d578d11f340] Started GET "/" for 172.25.0.1 at 2018-03-27 09:24:15 +0000
+I, [2018-03-27T09:24:15.737882 #13]  INFO -- : [b0d58a30-de55-405b-a53a-0d578d11f340] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T09:24:15.741071 #13] DEBUG -- : [b0d58a30-de55-405b-a53a-0d578d11f340]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T09:24:15.745304 #13] DEBUG -- : [b0d58a30-de55-405b-a53a-0d578d11f340]   [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T09:24:15.746493 #13]  INFO -- : [b0d58a30-de55-405b-a53a-0d578d11f340]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T09:24:15.753907 #13]  INFO -- : [b0d58a30-de55-405b-a53a-0d578d11f340]   Rendered users/dashboard.html.erb within layouts/application (7.0ms)
+I, [2018-03-27T09:24:15.755042 #13]  INFO -- : [b0d58a30-de55-405b-a53a-0d578d11f340]   Rendered layouts/_navbar.html.erb (0.3ms)
+I, [2018-03-27T09:24:15.755590 #13]  INFO -- : [b0d58a30-de55-405b-a53a-0d578d11f340] Completed 200 OK in 17ms (Views: 9.4ms | ActiveRecord: 1.3ms)
+I, [2018-03-27T09:24:17.653549 #8]  INFO -- : [8d09f8cc-5b5d-47bf-b534-4c17cdebfc9a] Started GET "/" for 172.25.0.4 at 2018-03-27 09:24:17 +0000
+I, [2018-03-27T09:24:17.662106 #8]  INFO -- : [8d09f8cc-5b5d-47bf-b534-4c17cdebfc9a] Processing by UsersController#dashboard as HTML
+D, [2018-03-27T09:24:17.722651 #8] DEBUG -- : [8d09f8cc-5b5d-47bf-b534-4c17cdebfc9a]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T09:24:17.771466 #8] DEBUG -- : [8d09f8cc-5b5d-47bf-b534-4c17cdebfc9a]   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE "leave_applications"."approved" = $1 AND (
+      users.hod_email = 'wk.sin@imv.com.sg')[0m  [["approved", "N/A"]]
+I, [2018-03-27T09:24:17.798302 #8]  INFO -- : [8d09f8cc-5b5d-47bf-b534-4c17cdebfc9a]   Rendering users/dashboard.html.erb within layouts/application
+I, [2018-03-27T09:24:17.818048 #8]  INFO -- : [8d09f8cc-5b5d-47bf-b534-4c17cdebfc9a]   Rendered users/dashboard.html.erb within layouts/application (19.4ms)
+I, [2018-03-27T09:24:17.839648 #8]  INFO -- : [8d09f8cc-5b5d-47bf-b534-4c17cdebfc9a]   Rendered layouts/_navbar.html.erb (0.9ms)
+I, [2018-03-27T09:24:17.840829 #8]  INFO -- : [8d09f8cc-5b5d-47bf-b534-4c17cdebfc9a] Completed 200 OK in 177ms (Views: 58.0ms | ActiveRecord: 16.2ms)
+I, [2018-03-27T09:24:19.389354 #8]  INFO -- : [1a12c4bf-2a48-4ee5-a052-37ec0c58214b] Started GET "/leave_applications" for 172.25.0.4 at 2018-03-27 09:24:19 +0000
+I, [2018-03-27T09:24:19.393275 #8]  INFO -- : [1a12c4bf-2a48-4ee5-a052-37ec0c58214b] Processing by LeaveApplicationsController#index as HTML
+D, [2018-03-27T09:24:19.399430 #8] DEBUG -- : [1a12c4bf-2a48-4ee5-a052-37ec0c58214b]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T09:24:19.406475 #8] DEBUG -- : [1a12c4bf-2a48-4ee5-a052-37ec0c58214b]   [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "leave_applications" WHERE "leave_applications"."user_id" = $1[0m  [["user_id", 25]]
+D, [2018-03-27T09:24:19.408942 #8] DEBUG -- : [1a12c4bf-2a48-4ee5-a052-37ec0c58214b]   [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE (users.hod_email = 'wk.sin@imv.com.sg')[0m
+I, [2018-03-27T09:24:19.431072 #8]  INFO -- : [1a12c4bf-2a48-4ee5-a052-37ec0c58214b]   Rendering leave_applications/index.html.erb within layouts/application
+D, [2018-03-27T09:24:19.433460 #8] DEBUG -- : [1a12c4bf-2a48-4ee5-a052-37ec0c58214b]   [1m[36mLeaveApplication Load (0.5ms)[0m  [1m[34mSELECT "leave_applications".* FROM "leave_applications" WHERE "leave_applications"."user_id" = $1 ORDER BY "leave_applications"."id" ASC[0m  [["user_id", 25]]
+I, [2018-03-27T09:24:19.434880 #8]  INFO -- : [1a12c4bf-2a48-4ee5-a052-37ec0c58214b]   Rendered leave_applications/index.html.erb within layouts/application (3.4ms)
+I, [2018-03-27T09:24:19.435986 #8]  INFO -- : [1a12c4bf-2a48-4ee5-a052-37ec0c58214b]   Rendered layouts/_navbar.html.erb (0.2ms)
+I, [2018-03-27T09:24:19.436670 #8]  INFO -- : [1a12c4bf-2a48-4ee5-a052-37ec0c58214b] Completed 200 OK in 42ms (Views: 14.8ms | ActiveRecord: 4.9ms)
+I, [2018-03-27T09:24:23.762687 #13]  INFO -- : [2f577e4a-37ae-4421-a6ef-44053e3a2bf6] Started GET "/leave_applications" for 172.25.0.1 at 2018-03-27 09:24:23 +0000
+I, [2018-03-27T09:24:23.764600 #13]  INFO -- : [2f577e4a-37ae-4421-a6ef-44053e3a2bf6] Processing by LeaveApplicationsController#index as HTML
+D, [2018-03-27T09:24:23.766835 #13] DEBUG -- : [2f577e4a-37ae-4421-a6ef-44053e3a2bf6]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+D, [2018-03-27T09:24:23.770093 #13] DEBUG -- : [2f577e4a-37ae-4421-a6ef-44053e3a2bf6]   [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "leave_applications" WHERE "leave_applications"."user_id" = $1[0m  [["user_id", 25]]
+D, [2018-03-27T09:24:23.772759 #13] DEBUG -- : [2f577e4a-37ae-4421-a6ef-44053e3a2bf6]   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "leave_applications"."id") FROM "leave_applications" LEFT OUTER JOIN "users" ON "users"."id" = "leave_applications"."user_id" WHERE (users.hod_email = 'wk.sin@imv.com.sg')[0m
+I, [2018-03-27T09:24:23.787841 #13]  INFO -- : [2f577e4a-37ae-4421-a6ef-44053e3a2bf6]   Rendering leave_applications/index.html.erb within layouts/application
+D, [2018-03-27T09:24:23.789986 #13] DEBUG -- : [2f577e4a-37ae-4421-a6ef-44053e3a2bf6]   [1m[36mLeaveApplication Load (0.4ms)[0m  [1m[34mSELECT "leave_applications".* FROM "leave_applications" WHERE "leave_applications"."user_id" = $1 ORDER BY "leave_applications"."id" ASC[0m  [["user_id", 25]]
+I, [2018-03-27T09:24:23.791294 #13]  INFO -- : [2f577e4a-37ae-4421-a6ef-44053e3a2bf6]   Rendered leave_applications/index.html.erb within layouts/application (3.1ms)
+I, [2018-03-27T09:24:23.793062 #13]  INFO -- : [2f577e4a-37ae-4421-a6ef-44053e3a2bf6]   Rendered layouts/_navbar.html.erb (0.3ms)
+I, [2018-03-27T09:24:23.793782 #13]  INFO -- : [2f577e4a-37ae-4421-a6ef-44053e3a2bf6] Completed 200 OK in 29ms (Views: 11.8ms | ActiveRecord: 2.2ms)
